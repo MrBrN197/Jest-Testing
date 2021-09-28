@@ -41,8 +41,13 @@ const calculator = {
   }
 }
 
+const capitalize = (string) => {
+  return [string[0].toUpperCase(), ...string.slice(1)].join('')
+};
+
 module.exports = { 
   reverseString, 
   stringLength,
+  capitalize,
   calculator
 }

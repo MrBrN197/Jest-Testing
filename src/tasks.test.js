@@ -111,3 +111,13 @@ describe('Task 3', () => {
 
 })
 
+describe('Task 4', () => {
+
+  it('capitalizes the string', () => {
+    const string = 'captain';
+
+    const result = capitalize(string);
+
+    expect(result).toBe('Captain')
+  })
+})

@@ -11,7 +11,38 @@ const stringLength = string => {
 
 const reverseString = string => [...string].reverse().join('') 
 
+const validate = (a, b) => {
+  if(typeof a !== 'number' || typeof b != 'number'){
+    throw new Error('only accepts numbers as arguments')
+  }
+}
+
+const calculator = {
+  add: (a, b) => {
+    validate(a, b)
+    return a + b;
+  },
+  subtract: (a, b) => {
+    validate(a, b);
+    return a - b;
+  },
+  divide: (a, b) => {
+    validate(a,b);
+
+    if(b === 0) {
+      throw new Error('division by 0');
+    }
+
+    return a / b;
+  },
+  multiply: (a, b) => {
+    validate(a, b);
+    return a * b;
+  }
+}
+
 module.exports = { 
   reverseString, 
   stringLength,
-}
+  calculator
+}

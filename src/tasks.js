@@ -8,3 +8,10 @@ const stringLength = string => {
   }
   return string.length;
 }
+
+const reverseString = string => [...string].reverse().join('') 
+
+module.exports = { 
+  reverseString, 
+  stringLength,
+}
